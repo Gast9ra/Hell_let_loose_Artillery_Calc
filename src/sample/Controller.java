@@ -44,7 +44,7 @@ public class Controller {
         if (result!=null) {
             textAsumut.setText(result[1]+"°");
             try {
-                textDistance.setText(caculator.distanceToMIl(result[0]) + "Mil " + "(" + result[0] + "meter)");
+                textDistance.setText(caculator.distanceToMIl(result[0]) + "Mil " + "(" + result[0] + " m)");
             }catch (NumberFormatException e){
                 textDistance.setText("out of Range");
             }
