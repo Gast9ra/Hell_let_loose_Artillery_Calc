@@ -4,7 +4,8 @@ import java.util.Scanner;
 public class Main1 {
 
     public static void main(String[] args) throws Exception {
-
+        CalcData cal = new CalcData();
+        double[] temp = cal.map("g4-9.3", "h4-4.3");
 //        Scanner read = new Scanner(System.in);
 //        System.out.println("Пример: A1-3-5-1");
 //       // map("a1-2-6-4","a1-2-1-5");
