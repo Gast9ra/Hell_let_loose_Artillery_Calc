@@ -5,7 +5,7 @@ public class Main1 {
 
     public static void main(String[] args) throws Exception {
         CalcData cal = new CalcData();
-        double[] temp = cal.map("g4-1.1", "g4-10.1");
+        double[] temp = cal.map("g4-1.1",new Point(20,20), "g4-10.1",new Point(20,20));
         System.out.println(temp[0]);
         System.out.println(temp[1]);
 //        Scanner read = new Scanner(System.in);

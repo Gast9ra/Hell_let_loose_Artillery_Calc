@@ -6,12 +6,17 @@ class DotMap {
             "l", "m", "n", "o", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"};
     private static final int[] masCrutch = {7, 8, 9, 4, 5, 6, 1, 2, 3};
 
+    private static final int bigSqua=400;
+    private static final int smalSqua=40;
+
     private int coorWord;
     private int coorWord1;
     private int[] secondOrdinate = {0, 0};
+    private Point lastsquare;
 
 
-    DotMap(String strPos) {
+    DotMap(String strPos, Point pos) {
+        this.lastsquare =pos;
         String[] allOrdinat = strPos.split("-");
         if (allOrdinat.length < 2) throw new NumberFormatException();
 
@@ -42,13 +47,14 @@ class DotMap {
 
     // -1 нужен для того чтобы при квадрантыых координатах не переборщить ровно на половну
     Point getDot() {
-        int y = (coorWord1) * 100
-                + (secondOrdinate[1] - 1) * 10
-                +5;
 
-        int x = (coorWord) * 100
-                + (secondOrdinate[0] - 1) * 10
-                +5;
+        int y = (coorWord1) * bigSqua
+                + (secondOrdinate[1] - 1) * smalSqua
+                + lastsquare.getY();
+
+        int x = (coorWord) * bigSqua
+                + (secondOrdinate[0] - 1) * smalSqua
+                + lastsquare.getX();
 
         return new Point(x, y);
     }

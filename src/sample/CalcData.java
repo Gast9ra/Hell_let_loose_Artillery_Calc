@@ -7,17 +7,17 @@ public class CalcData {
 
     //пример координат A1-4,5 или a1-4,5
     //return double mas with 2 element. 0 is distance for target in meter, 1 asimut on target
-    public double[] map(String position1, String posiion2) {
+    public double[] map(String position1,Point dot1, String posiion2,Point dot2) {
         try {
-            DotMap start = new DotMap(position1);
-            DotMap finish = new DotMap(posiion2);
+            DotMap start = new DotMap(position1,dot1);
+            DotMap finish = new DotMap(posiion2,dot2);
 
             double resultAsimut = roundTwo(asimut(start.getDot(), finish.getDot()));
             double resultDistance = roundTwo(distans(start.getDot(), finish.getDot()));
 
             return new double[]{resultDistance, resultAsimut};
         } catch (NumberFormatException e) {
-            System.out.println("not valuble data");
+            System.out.println("not valuable data");
             return null;
         }
     }
