@@ -6,8 +6,8 @@ class DotMap {
             "l", "m", "n", "o", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"};
     private static final int[] masCrutch = {7, 8, 9, 4, 5, 6, 1, 2, 3};
 
-    private static final int bigSqua=400;
-    private static final int smalSqua=40;
+    private static final int bigSqua=200;
+    private static final int smalSqua=20;
 
     private int coorWord;
     private int coorWord1;

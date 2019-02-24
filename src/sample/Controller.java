@@ -11,7 +11,7 @@ import javafx.scene.text.Text;
 public class Controller {
 
     private static CalcData caculator = new CalcData();
-    private static final int smallSquare = 40;
+    private static final int smallSquare = 20;
     private static final int half = smallSquare/2;
     private static final float factor = (float) smallSquare / 250;
     private static Point box1 = new Point(half, half);
@@ -60,7 +60,7 @@ public class Controller {
 
     }
 
-    //small square 40m, box on scene 250px conf=0.16
+    //small square 20m, box on scene 250px conf=0.08
     public void MouseClick1(MouseEvent mouseEvent) {
         box1.setX((int) (mouseEvent.getX() * factor));
         box1.setY((int) (mouseEvent.getY() * factor));
