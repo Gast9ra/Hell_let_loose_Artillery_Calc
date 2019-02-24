@@ -43,8 +43,8 @@
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="$x4" height="250.0" layoutX="529.0" layoutY="138.0" onMouseClicked="#MouseClick2" stroke="BLACK" strokeType="INSIDE" width="250.0" />
         <Button layoutX="314.0" layoutY="361.0" mnemonicParsing="false" onAction="#Reset1" text="Reset" />
         <Button layoutX="789.0" layoutY="361.0" mnemonicParsing="false" onAction="#Reset2" text="Reset" />
-            <Text fx:id="SVGText1" layoutX="173.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="20:20" />
-            <Text fx:id="SVGText2" layoutX="640.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="20:20" />
+            <Text fx:id="SVGText1" layoutX="173.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10:10" />
+            <Text fx:id="SVGText2" layoutX="640.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10:10" />
       </children>
     </Pane>
   </children>
