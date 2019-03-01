@@ -4,7 +4,6 @@ class DotMap {
 
     private static final String[] abc = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k",
             "l", "m", "n", "o", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"};
-    private static final int[] masCrutch = {7, 8, 9, 4, 5, 6, 1, 2, 3};
 
     private static final int bigSqua=200;
     private static final int smalSqua=20;
@@ -36,14 +35,9 @@ class DotMap {
         else throw new NumberFormatException();
         this.secondOrdinate[0] = Integer.parseInt(temp[0]);
         this.secondOrdinate[1] = Integer.parseInt(temp[1]);
-//        this.secondOrdinate[0] = masCrutch[Integer.parseInt(allOrdinat[1]) - 1];
 
     }
 
-    private int[] cubetoOrdinate(int[] inputMas) {
-        if (inputMas[0] % 3 == 0) return new int[]{3, inputMas[0] / 3};
-        else return new int[]{inputMas[0] % 3, inputMas[0] / 3 + 1};
-    }
 
     // -1 нужен для того чтобы при квадрантыых координатах не переборщить ровно на половну
     Point getDot() {

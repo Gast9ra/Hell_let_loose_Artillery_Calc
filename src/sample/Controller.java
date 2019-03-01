@@ -1,6 +1,5 @@
 package sample;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
@@ -45,7 +44,7 @@ public class Controller {
     private Text SVGText2;
 
 
-    public void calc(javafx.event.ActionEvent actionEvent) {
+    public void calc() {
         textAsumut.setVisible(true);
         textDistance.setVisible(true);
         double[] result = caculator.map(textFieldArtilery.getText(), box1, textFieldTarget.getText(), box2);
@@ -73,13 +72,13 @@ public class Controller {
         SVGText2.setText(box2.getX() + ":" + box2.getY());
     }
 
-    public void Reset1(ActionEvent actionEvent) {
+    public void Reset1() {
         box1.setX(half);
         box1.setY(half);
         SVGText1.setText(box1.getX() + ":" + box1.getY());
     }
 
-    public void Reset2(ActionEvent actionEvent) {
+    public void Reset2() {
         box2.setX(half);
         box2.setY(half);
         SVGText2.setText(box2.getX() + ":" + box2.getY());

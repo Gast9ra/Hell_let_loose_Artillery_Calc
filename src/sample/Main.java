@@ -20,11 +20,6 @@ public class Main extends Application {
 
 
     public static void main(String[] args) {
-//        double[] temp = map("g4-9.3", "h4-4.3");
-//        System.out.println(roundTwo(11.49425287356322));
-//        System.out.println( distanceTOMIl(650));
-
-
         launch(args);
     }
 
