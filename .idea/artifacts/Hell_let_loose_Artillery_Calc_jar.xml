@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Hell let loose Artillery Calc:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Hell_let_loose_Artillery_Calc_jar</output-path>
+    <root id="archive" name="Hell let loose Artillery Calc.jar">
+      <element id="module-output" name="Hell let loose Artillery Calc" />
+    </root>
+  </artifact>
+</component>

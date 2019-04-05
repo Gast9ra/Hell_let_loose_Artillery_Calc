@@ -9,10 +9,10 @@ import javafx.scene.text.Text;
 
 public class Controller {
 
-    private static CalcData caculator = new CalcData();
+    private static CalcData calculator = new CalcData();
     private static final int smallSquare = 20;
     private static final int half = smallSquare/2;
-    private static final float factor = (float) smallSquare / 250;
+    private static final float factor = (float) smallSquare / 250; //cof for give ordinate in small square
     private static Point box1 = new Point(half, half);
     private static Point box2 = new Point(half, half);
 
@@ -47,11 +47,11 @@ public class Controller {
     public void calc() {
         textAsumut.setVisible(true);
         textDistance.setVisible(true);
-        double[] result = caculator.map(textFieldArtilery.getText(), box1, textFieldTarget.getText(), box2);
+        double[] result = calculator.map(textFieldArtilery.getText(), box1, textFieldTarget.getText(), box2);
         if (result != null) {
             textAsumut.setText(result[1] + "°");
             try {
-                textDistance.setText(caculator.distanceToMIl(result[0]) + "Mil " + "(" + result[0] + " m)");
+                textDistance.setText(calculator.distanceToMIl(result[0]) + "Mil " + "(" + result[0] + " m)");
             } catch (NumberFormatException e) {
                 textDistance.setText("out of Range");
             }

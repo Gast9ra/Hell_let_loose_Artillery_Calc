@@ -26,7 +26,8 @@ class DotMap {
             }
         }
 
-        this.coorWord1 = Integer.parseInt(strPos.substring(1, 2));
+        //this.coorWord1 = Integer.parseInt(strPos.substring(1, 2));
+        this.coorWord1 = Integer.parseInt(allOrdinat[0].replace(abc[coorWord],""));
         if (coorWord1 > 0) coorWord1 -= 1;
 
         String[] temp;

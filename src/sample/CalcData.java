@@ -20,6 +20,10 @@ class CalcData {
         }
     }
 
+
+    /**
+     * calc distance to mill with error +-4.2 or 4.34 m
+     */
     private static final int[] meterMil = {978, 954, 930, 907, 883, 859, 836, 812,
             788, 764, 741, 717, 693, 670, 646, 622};
     private static final int[] mil = {24, 24, 23, 24, 24, 23, 24, 24, 24, 23, 24, 24, 23, 24, 24};
@@ -39,14 +43,16 @@ class CalcData {
 //        milStart+=mil[(int)dis/100-1];//back on 100 meter in Mil
     }
 
+    //calc distance vector
     private static double distans(Point position1, Point position2) {
         return Math.sqrt(Math.pow((position2.getX() - position1.getX()), 2)
                 + Math.pow((position2.getY() - position1.getY()), 2));
     }
 
+
     private static double asimut(Point dot1, Point dot2) {
-        Point dot3 = new Point(dot1.getX(), dot2.getY());
-        double angle = Math.toDegrees(Math.atan(distans(dot2, dot3) / distans(dot1, dot3)));
+        Point dot3 = new Point(dot1.getX(), dot2.getY()); //third dot in triangle
+        double angle = Math.toDegrees(Math.atan(distans(dot2, dot3) / distans(dot1, dot3))); //theorem cos
         //finding the plane(нахождение плоскости)
         if (dot1.getX() - dot2.getX() > 0 && dot1.getY() - dot2.getY() > 0) {
             return 360 - angle;

@@ -5,19 +5,20 @@ public class Main1 {
 
     public static void main(String[] args) throws Exception {
         CalcData cal = new CalcData();
-        double[] temp = cal.map("g4-1.1",new Point(20,20), "g4-10.1",new Point(20,20));
-        System.out.println(temp[0]);
-        System.out.println(temp[1]);
-//        Scanner read = new Scanner(System.in);
+       // double[] temp = cal.map("g4-1.1",new Point(20,20), "g4-10.1",new Point(20,20));
+      //  System.out.println(cal.distanceToMIl(900));
+     //   System.out.println(temp[1]);
+        Scanner read = new Scanner(System.in);
 //        System.out.println("Пример: A1-3-5-1");
 //       // map("a1-2-6-4","a1-2-1-5");
-//        while (true) {
-//            System.out.println("Введите начальную точку");
-//            String first = read.nextLine();
-//            System.out.println("Введите цель");
-//            String second = read.nextLine();
-//            map(first.toLowerCase() , second.toLowerCase());
-//        }
+        while (true) {
+            System.out.println("Введите дистанцию");
+            String first = read.nextLine();
+            System.out.println(cal.distanceToMIl(Integer.parseInt(first)));
+////            System.out.println("Введите цель");
+////            String second = read.nextLine();
+////            map(first.toLowerCase() , second.toLowerCase());
+        }
     }
 
 //    private static void map(String position1,String posiion2) {
